@@ -24,4 +24,6 @@ namespace BharathSchool.Web.Models
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        public ICollection<Media> MediaItems { get; set; } = new List
+        public ICollection<Media> MediaItems { get; set; } = new List<Media>();
+    }
+}
