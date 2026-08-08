@@ -32,4 +32,20 @@ namespace BharathSchool.Web.Models
         public string Address { get; set; } = string.Empty;
 
         [MaxLength(300)]
-        public string ParentName { get; set
+        public string ParentName { get; set; } = string.Empty;
+
+        [MaxLength(100)]
+        public string ParentContact { get; set; } = string.Empty;
+
+        public int? BusRouteId { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        [ForeignKey("StandardId")]
+        public Standard Standard { get; set; }
+
+        [ForeignKey("SectionId")]
+        public Section Section { get; set; }
+    }
+}
+
